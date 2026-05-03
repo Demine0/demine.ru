@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>demine.ru</title>
+    <script>
+        var a = Math.round(Math.random() * 1);
+        var nameR = ['Demine', 'Nikita Litvinov'];
+        var nickR = ['Nikita', 'Demine'];
+        var c = Math.round(Math.random() * 2);
+        var imgR = ['img/pic0.jpeg', 'img/pic1.jpeg', 'img/pic2.jpeg'];
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a:has(button) {
+            text-decoration: none;
+        }
+
+        .info {
+            max-width: 300px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            padding: 1em;
+        }
+
+        .alert-style-header {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 20px;
+
+        }
+
+        .alert-icon {
+            flex-shrink: 0;
+            width: 96px;
+            height: 96px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-icon img {
+            width: 100%;
+            border: 2px solid black;
+            padding: 1px;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .alert-text {
+            height: 96px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }        
+
+        .btn-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 6px !important;
+            width: 100%;
+        }
+
+        .btn-grid a:not(.email-box) {
+            flex: 1 1 calc(50% - 6px) !important;
+            box-sizing: border-box !important;
+        }
+
+        .btn-grid a.email-box {
+            flex: 1 1 100% !important;
+            box-sizing: border-box !important;
+            margin-top: 2px;
+        }
+
+        .btn-grid .btn {
+            width: 100% !important;
+            height: 100%;
+            display: block;
+        }
+
+        .dialog-text {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window info">
+        <div class="title-bar">
+            <h1 class="title">
+                <script>document.write(nameR[a]);</script>
+            </h1>
+        </div>
+        <div class="separator"></div>
+
+        <div class="container">
+            <div class="alert-style-header">
+                <div class="alert-icon">
+                    <script>document.write("<img src='" + imgR[c] + "'>");</script>
+                </div>
+                <div class="alert-text">
+                    <h2 class="dialog-text">a.k.a. <script>document.write(nickR[a]);</script></h2>
+                </div>
+            </div>
+
+            <h1 class="dialog-text">
+                never knows best <br>
+                Might start a blog here <br>
+                Tech enthusiast, Photographer and PowerPC fan
+            </h1>
+
+            <h1 class="dialog-text"> Contacts </h1>
+
+            <section class="btn-grid">
+                <a href="https://t.me/demine" target="_blank">
+                    <button class="btn">Telegram</button>
+                </a>
+                <a href="https://instagram.com/demine0" target="_blank">
+                    <button class="btn">Instagram</button>
+                </a>
+                <a href="https://discord.com/users/330681000051081217" target="_blank">
+                    <button class="btn">Discord</button>
+                </a>
+                <a href="https://github.com/Demine0" target="_blank">
+                    <button class="btn">GitHub</button>
+                </a>
+                <a href="https://t.me/demblog" target="_blank">
+                    <button class="btn">Blog</button>
+                </a>
+                <a href="https://t.me/demine_photo" target="_blank">
+                    <button class="btn">Photos</button>
+                </a>
+                <a href="mailto:email@demine.ru" class="email-box">
+                    <button class="btn">email@demine.ru</button>
+                </a>
+            </section>
+
+            <div class="scale-down">
+                <h6 class="dialog-text">&copy; 2026 demine.ru <br> Simferopol <br>
+                <small style="opacity: 0.6;">Built with system.css</small></h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
